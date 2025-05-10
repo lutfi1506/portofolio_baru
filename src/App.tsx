@@ -1,14 +1,11 @@
-import { useState } from "react";
-import "./App.css";
-import { Button } from "./components/ui/button";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Button onClick={() => setCount(count + 1)}>Increment</Button>
-      <p>Count: {count}</p>
+      <Navbar />
+      <Hero />
     </>
   );
 }
