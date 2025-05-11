@@ -1,6 +1,7 @@
 // src/components/Hero.tsx
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
@@ -8,17 +9,17 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center px-4 md:px-8 py-16 bg-gradient-to-br from-primary/5 via-background to-primary/5"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10"
-      >
-        <div className="md:w-1/2 flex justify-center relative group">
+      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <motion.div
+          initial={{ opacity: 0, x: -500 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="md:w-1/2 flex justify-center relative group"
+        >
           <svg
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute z-1 w-72 md:w-[25rem] transition-all rotate-45 opacity-30 duration-300 group-hover:scale-105"
+            className="absolute z-1 w-72 md:w-[25rem] transition-all rotate-45 opacity-35 "
           >
             <path
               fill="#51A2FF"
@@ -29,34 +30,70 @@ export default function Hero() {
           <img
             src="/images/me.webp"
             alt="Foto Profil Lutfi"
-            className="w-48 md:w-60 object-cover transition-all duration-300 z-10 group-hover:scale-105"
+            className="w-48 md:w-60 object-cover transition-all  z-10"
           />
-        </div>
+        </motion.div>
 
         <div className="md:w-1/2 text-center md:text-left space-y-4">
-          <p className="text-xl text-primary font-medium">Halo semua, saya</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold ">
-            Lutfiar Rahman M
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            Fresh Graduate | Web Developer
-          </p>
-          <p className="text-base ">
-            Saya adalah seorang pengembang web yang antusias dan bersemangat
-            untuk belajar.
-          </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button asChild>
-              <a href="#projects">Lihat Proyek</a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="/cv-lutfi.pdf" download>
-                Download CV
-              </a>
-            </Button>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-xl text-primary font-medium mb-1.5"
+          >
+            Halo semua, saya
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, x: 500 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold ">
+              Lutfiar Rahman M
+            </h1>
+            <span className="text-2xl sm:text-3xl font-semibold text-muted-foreground">
+              <Typewriter
+                words={[
+                  "Fresh Graduate",
+                  "Web Developer",
+                  "Fullstack Developer",
+                ]}
+                loop={0}
+                cursor
+                typeSpeed={120}
+                deleteSpeed={100}
+                delaySpeed={1000}
+                cursorBlinking={false}
+                cursorColor="#51A2FF"
+              />
+            </span>
+
+            <p className="text-base text-muted-foreground">
+              Welcome to my personal website!
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Button asChild>
+                <a
+                  href="#projects"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .querySelector("#projects")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Lihat Proyek
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href="/cv-lutfi.pdf" download>
+                  Download CV
+                </a>
+              </Button>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

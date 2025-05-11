@@ -1,14 +1,13 @@
 // src/components/Navbar.tsx
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { motion } from "framer-motion";
 
 const navLinks = [
-  { to: "home", label: "Beranda" },
-  { to: "about", label: "Tentang" },
-  { to: "education", label: "Pendidikan" },
-  { to: "skills", label: "Kemampuan" },
-  { to: "projects", label: "Proyek" },
-  { to: "contact", label: "Kontak" },
+  { to: "home", label: "Home" },
+  { to: "about", label: "About" },
+  { to: "skills", label: "Skills" },
+  { to: "projects", label: "Projects" },
 ];
 
 export default function Navbar() {
@@ -29,8 +28,11 @@ export default function Navbar() {
         </a>
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
+          {navLinks.map((link, index) => (
+            <motion.a
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               href={"#" + link.to}
               onClick={(e) => {
                 e.preventDefault();
@@ -42,7 +44,7 @@ export default function Navbar() {
               key={link.to}
             >
               {link.label}
-            </a>
+            </motion.a>
           ))}
         </nav>
         {/* Mobile Nav */}
