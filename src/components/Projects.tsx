@@ -10,31 +10,31 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Portofolio Website",
+    title: "Website Portofolio",
     description:
-      "Website portofolio pribadi dibangun menggunakan React, TypeScript, dan ShadCN UI.",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
-    link: "#",
+      "Website portofolio pribadi yang dibangun menggunakan React, TypeScript, dan ShadCN UI.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "ShadCN UI"],
+    link: "https://lutfiar.my.id/",
     github: "https://github.com/lutfi/portfolio ",
     image: "/images/portfolio.png", // Path ke gambar proyek
   },
   {
-    title: "To-Do List App",
+    title: "Aplikasi Kasir",
     description:
-      "Aplikasi manajemen tugas sederhana menggunakan React dan localStorage.",
-    tech: ["React", "JavaScript", "CSS"],
-    link: "#",
-    github: "https://github.com/lutfi/todo-app ",
-    image: "/images/projects/todo-list.png",
+      "Aplikasi kasir sederhana berbasis web yang membantu toko ritel dalam mengelola transaksi, stok barang, pelanggan, dan laporan keuangan secara efisien dan terpusat.",
+    tech: ["Laravel", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    link: "https://kasirapp-main-tgdaso.laravel.cloud",
+    github: "https://github.com/lutfi1506/kasir_ujikom",
+    image: "/images/kasirapp.png",
   },
   {
-    title: "Weather Dashboard",
+    title: "Chatbot Groq ai",
     description:
-      "Dashboard prakiraan cuaca real-time menggunakan API OpenWeatherMap.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
-    github: "https://github.com/lutfi/weather-app ",
-    image: "/images/projects/weather-dashboard.png",
+      "Chatbot yang menggunakan AI untuk memberikan jawaban cepat dan akurat.",
+    tech: ["React", "CSS", "Express", "Axios"],
+    link: "https://groq-frontend.vercel.app/",
+    github: "https://github.com/lutfi1506/groq_frontend",
+    image: "/images/groq-ai.png",
   },
 ];
 
@@ -63,19 +63,17 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="p-5 h-full flex flex-col hover:shadow-lg transition-all hover:-translate-y-5 ease duration-300">
+              <Card className="p-5 h-full flex flex-col md:hover:shadow-lg transition-all md:hover:-translate-y-5 ease duration-300">
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>
-                </CardHeader>
-
-                <CardContent>
-                  {/* Gambar Proyek */}
                   <img
                     src={project.image}
                     alt={`${project.title} Preview`}
-                    className="w-full h-40 object-cover rounded-md mb-3 "
+                    className="w-full h-32 object-cover rounded-md mb-3 mt-1.5 "
                   />
+                </CardHeader>
 
+                <CardContent>
                   {/* Deskripsi */}
                   <p className="text-muted-foreground mb-4 flex-grow">
                     {project.description}
@@ -94,24 +92,50 @@ export default function Projects() {
                   </div>
                 </CardContent>
 
-                <CardFooter className="mt-auto">
+                <CardFooter className="mt-auto ms-auto">
                   {/* Tombol Aksi */}
                   <div className="flex gap-3">
                     <a
-                      href={project.link}
-                      className="text-sm underline text-primary hover:no-underline"
+                      href={project.github}
+                      className="text-muted-foreground hover:text-primary"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="GitHub"
                     >
-                      Demo
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.983 1.03-2.682-.103-.253-.447-1.27.098-2.645 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.91-1.294 2.75-1.025 2.75-1.025.546 1.375.202 2.392.1 2.645.64.7 1.03 1.591 1.03 2.682 0 3.842-2.337 4.687-4.565 4.935.36.31.682.92.682 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </a>
                     <a
-                      href={project.github}
-                      className="text-sm underline text-muted-foreground hover:text-primary hover:no-underline"
+                      href={project.link}
+                      className="text-primary hover:text-primary/80"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Demo"
                     >
-                      GitHub
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 9V5.25a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v13.5a2.25 2.25 0 002.25 2.25h6.75a2.25 2.25 0 002.25-2.25V15M9 12h12m0 0l-3-3m3 3l-3 3"
+                        />
+                      </svg>
                     </a>
                   </div>
                 </CardFooter>

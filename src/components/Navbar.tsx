@@ -24,7 +24,7 @@ export default function Navbar() {
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          Lutfi
+          Lutfiar Rahman Ma'arif
         </a>
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">

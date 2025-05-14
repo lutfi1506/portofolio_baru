@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/lutfi-profile "
+            href="https://linkedin.com/in/lutfiar-maarif"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors"

@@ -27,7 +27,7 @@ export default function About() {
             <img
               src="/images/me.webp"
               alt="Foto Profil Lutfi"
-              className="w-48 md:w-60 object-cover rounded-full transition-transform duration-300 hover:scale-105"
+              className="w-60 md:w-80"
             />
           </motion.div>
 
@@ -39,30 +39,23 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="md:col-span-2 space-y-4"
           >
-            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Halo! Nama saya <strong>Lutfi</strong>, saya adalah seorang{" "}
-              <strong>Fresh Graduate</strong> dari{" "}
-              <strong>SMK Negeri 1 Kadipaten</strong> Dengan jurusan{" "}
-              <strong>Rekayasa Perangkat Lunak</strong>.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Saya tertarik pada bidang <strong>Web Development</strong>,
-              khususnya bagian Fullstack Development. Selama masa studi, saya
-              banyak belajar teknologi seperti <strong>HTML</strong>,{" "}
-              <strong>CSS</strong>, <strong>JavaScript</strong>,{" "}
-              <strong>php</strong>, <strong>MySQL</strong>, dan{" "}
-              <strong>Laravel</strong>. Tetapi saya juga mempelajari beberapa
-              teknologi seperti <strong>React</strong>, <strong>Next.js</strong>
-              , <strong>Tailwind CSS</strong> secara otodidak melewati youtube
+            <p className="text-muted-foreground text-lg text-justify leading-relaxed">
+              Halo! Nama saya <strong>Lutfiar Rahman Maarif</strong>, seorang
+              Fresh Graduate dari SMK Negeri 1 Kadipaten, jurusan Rekayasa
+              Perangkat Lunak. Saya sangat tertarik pada bidang{" "}
+              <strong>Web Development</strong>, terutama Fullstack Development.
+              Selama masa studi, saya banyak belajar teknologi seperti{" "}
+              <strong>HTML, CSS, JavaScript, PHP, MySQL</strong>, dan{" "}
+              <strong>Laravel</strong>. Selain itu, saya juga aktif mempelajari
+              teknologi modern seperti{" "}
+              <strong>React, Next.js, dan Tailwind CSS</strong> melalui YouTube
               dan dokumentasi resmi.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Saya senang belajar hal baru dan siap bekerja dalam tim untuk
-              mengembangkan produk digital yang bermanfaat bagi pengguna.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Saat ini saya sedang mencari peluang untuk berkembang sebagai
-              developer dan terus meningkatkan kemampuan saya.
+            <p className="text-muted-foreground text-lg text-justify leading-relaxed">
+              Saya memiliki semangat belajar hal baru dan selalu siap bekerja
+              dalam tim untuk mengembangkan produk digital yang bermanfaat bagi
+              pengguna. Saat ini, saya sedang mencari peluang untuk berkembang
+              sebagai developer dan terus meningkatkan kemampuan saya.
             </p>
           </motion.div>
         </div>

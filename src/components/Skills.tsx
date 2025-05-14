@@ -55,11 +55,38 @@ const technicalSkills = [
   },
 ];
 
+const tools = [
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    description: "Version control",
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    description: "git hosting",
+  },
+  {
+    name: "npm",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
+    description: "Package manager",
+  },
+  {
+    name: "Postman",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    description: "API testing",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+    description: "Database",
+  },
+];
+
 export default function Skills() {
   return (
     <section id="skills" className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        {/* Judul Section */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +97,6 @@ export default function Skills() {
           Skills
         </motion.h2>
 
-        {/* Technical Skills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +104,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h3 className="text-xl font-semibold mb-6">Technical Skills</h3>
+          <h3 className="text-xl font-semibold mb-6">Techtacks</h3>
           <div className="flex flex-wrap min-w-full justify-center">
             {technicalSkills.map((skill, index) => (
               <motion.div
@@ -99,8 +125,33 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        {/* Soft Skills */}
-        {/* ... */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <h3 className="text-xl font-semibold mb-6">Tools</h3>
+          <div className="flex flex-wrap min-w-full justify-center">
+            {tools.map((skill, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 p-1.5 sm:p-3 lg:px-4"
+              >
+                <SkillCard
+                  name={skill.name}
+                  icon={skill.icon}
+                  level={skill.description}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

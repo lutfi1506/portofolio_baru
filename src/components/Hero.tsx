@@ -9,9 +9,9 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center px-4 md:px-8 py-16 bg-gradient-to-br from-primary/5 via-background to-primary/5"
     >
-      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="max-w-5xl md:order-last w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <motion.div
-          initial={{ opacity: 0, x: -500 }}
+          initial={{ opacity: 0, x: 500 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="md:w-1/2 flex justify-center relative group"
@@ -19,7 +19,7 @@ export default function Hero() {
           <svg
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute z-1 w-72 md:w-[25rem] transition-all rotate-45 opacity-35 "
+            className="absolute z-1 w-72 md:w-[30rem] transition-all rotate-45 opacity-35 "
           >
             <path
               fill="#51A2FF"
@@ -28,13 +28,13 @@ export default function Hero() {
             />
           </svg>
           <img
-            src="/images/me.webp"
+            src="/images/profile.webp"
             alt="Foto Profil Lutfi"
-            className="w-48 md:w-60 object-cover transition-all  z-10"
+            className="w-50 md:w-80 object-cover transition-all z-10 "
           />
         </motion.div>
 
-        <div className="md:w-1/2 text-center md:text-left space-y-4">
+        <div className="md:w-1/2 md:order-first text-center md:text-left space-y-4">
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function Hero() {
             Halo semua, saya
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, x: 500 }}
+            initial={{ opacity: 0, x: -500 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
