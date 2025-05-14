@@ -86,7 +86,7 @@ export default function Hero() {
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="/cv-lutfi.pdf" download>
+                <a href="/cv-lutfiar.pdf" download>
                   Download CV
                 </a>
               </Button>

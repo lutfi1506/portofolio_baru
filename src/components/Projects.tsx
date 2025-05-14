@@ -14,7 +14,7 @@ const projects = [
     description:
       "Website portofolio pribadi yang dibangun menggunakan React, TypeScript, dan ShadCN UI.",
     tech: ["React", "TypeScript", "Tailwind CSS", "ShadCN UI"],
-    link: "https://lutfiar.my.id/",
+    link: "",
     github: "https://github.com/lutfi/portfolio ",
     image: "/images/portfolio.png", // Path ke gambar proyek
   },
